@@ -1,3 +1,23 @@
+# Update and install packages
+#
 update-core
 pacman -Su
 pacman -Syu
+pacman -S vim git openssh
+pacman -S mingw-w64-x86_64-toolchain
+
+
+# Add a column in context menu by right clicke
+#
+# HKEY_CLASSES_ROOT\Directory\Background\shell\MSYS2
+# HKEY_CLASSES_ROOT\Directory\Background\shell\MSYS2\command
+# HKEY_CLASSES_ROOT\Directory\shell\MSYS2
+# HKEY_CLASSES_ROOT\Directory\shell\MSYS2\commnad
+#
+# Value of key "command" is 
+"C:\msys64\mingw64.exe" /bin/bash -l -c "{ cd ""%V""; exec /bin/bash;}"
+
+
+# Create a symbolic link in windows because "ln -s" is not working.
+#
+mklink /d GeneratedLink TargetDir
