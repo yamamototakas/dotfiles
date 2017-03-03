@@ -1,5 +1,5 @@
 # .bash_aliases
-echo '.bash_aliases'
+# echo '.bash_aliases'
 
 # Convert charset from UTF-8 to Windows CP932
 #   only for several windows built-in commands 
